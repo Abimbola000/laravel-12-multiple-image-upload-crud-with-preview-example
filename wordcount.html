@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online tool to count characters, words, sentences, and paragraphs instantly. Useful for social media, SEO, and writing.">
+  <title>Free Online Character Counter | Fast & Accurate</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .output {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    @media (max-width: 600px) {
+      textarea {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Online Character Counter Tool</h1>
+    <p>Use this free character counter to count characters, words, sentences, and paragraphs in your text. Perfect for tweets, SEO meta descriptions, writing, and editing.</p>
+
+    <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
+    <div class="output">
+      <p><strong>Character Count:</strong> <span id="char-count">0</span></p>
+      <p><strong>Word Count:</strong> <span id="word-count">0</span></p>
+      <p><strong>Sentence Count:</strong> <span id="sentence-count">0</span></p>
+      <p><strong>Paragraph Count:</strong> <span id="paragraph-count">0</span></p>
+    </div>
+
+    <h2>Why Use a Character Counter?</h2>
+    <p>Character limits matter when writing meta descriptions, tweets, SMS messages, or social media captions. This tool helps you stay within those limits effortlessly while also offering word, sentence, and paragraph counts.</p>
+
+    <h2>FAQs</h2>
+    <h3>What is a character counter?</h3>
+    <p>A character counter is a tool that counts how many letters, numbers, spaces, and punctuation marks are in your text.</p>
+
+    <h3>Does it include spaces?</h3>
+    <p>Yes, spaces are counted as characters in this tool.</p>
+
+    <h3>Can I count sentences and paragraphs too?</h3>
+    <p>Yes! This tool also counts the number of sentences and paragraphs in your text.</p>
+
+    <h3>Is this tool free?</h3>
+    <p>Absolutely! It’s 100% free and requires no login or registration.</p>
+  </div>
+
+  <script>
+    const textInput = document.getElementById('text-input');
+    const wordCount = document.getElementById('word-count');
+    const charCount = document.getElementById('char-count');
+    const sentenceCount = document.getElementById('sentence-count');
+    const paragraphCount = document.getElementById('paragraph-count');
+
+    textInput.addEventListener('input', function () {
+      const text = this.value;
+      const words = text.trim().length > 0 ? text.trim().split(/\s+/).length : 0;
+      const chars = text.length;
+      const sentences = text.trim().length > 0 ? (text.match(/[^.!?]+[.!?]+/g) || []).length : 0;
+      const paragraphs = text.trim().length > 0 ? text.trim().split(/\n+/).filter(p => p.trim() !== '').length : 0;
+
+      wordCount.textContent = words;
+      charCount.textContent = chars;
+      sentenceCount.textContent = sentences;
+      paragraphCount.textContent = paragraphs;
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Online Character Counter",
+    "url": "https://yourdomain.com/tools/online-character-counter",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "description": "Free online tool to count characters, words, sentences, and paragraphs instantly.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</body>
+</html>

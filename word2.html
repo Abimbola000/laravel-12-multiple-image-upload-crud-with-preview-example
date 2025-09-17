@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online tool to count characters and words in your text instantly. Useful for SEO, social media, and content writing.">
+  <title>Free Online Character Counter | Word & Character Count Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    .output {
+      margin-top: 15px;
+      font-size: 18px;
+      background: #fff;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Character Counter Tool</h1>
+  <p>Paste or type your text below to get an instant character and word count. Ideal for tweets, SEO meta descriptions, SMS, and more.</p>
+
+  <textarea id="text-input" placeholder="Start typing or paste your text here..."></textarea>
+
+  <div class="output">
+    <p><strong>Character Count:</strong> <span id="char-count">0</span></p>
+    <p><strong>Word Count:</strong> <span id="word-count">0</span></p>
+  </div>
+
+  <script>
+    const textarea = document.getElementById('text-input');
+    const charCount = document.getElementById('char-count');
+    const wordCount = document.getElementById('word-count');
+
+    textarea.addEventListener('input', function () {
+      const text = this.value.trim();
+      charCount.textContent = text.length;
+      wordCount.textContent = text.length > 0 ? text.split(/\s+/).length : 0;
+    });
+  </script>
+</body>
+</html>
